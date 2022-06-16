@@ -1,0 +1,12 @@
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\bin\Debug\net5.0\Webproject.Models.deps.json
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\bin\Debug\net5.0\Webproject.Models.dll
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\bin\Debug\net5.0\ref\Webproject.Models.dll
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\bin\Debug\net5.0\Webproject.Models.pdb
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\Webproject.Models.csproj.AssemblyReference.cache
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\Webproject.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\Webproject.Models.AssemblyInfoInputs.cache
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\Webproject.Models.AssemblyInfo.cs
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\Webproject.Models.csproj.CoreCompileInputs.cache
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\Webproject.Models.dll
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\ref\Webproject.Models.dll
+C:\Users\skidr\source\repos\KursovProekt_May_2022\Project.Models\obj\Debug\net5.0\Webproject.Models.pdb

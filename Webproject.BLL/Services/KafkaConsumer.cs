@@ -1,0 +1,60 @@
+﻿using Confluent.Kafka;
+using Microsoft.Extensions.Hosting;
+using Project.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Webproject.BLL.Services
+{
+    public  class KafkaConsumer : IHostedService
+    {
+        private static IConsumer<int, Client> _consumer;
+
+        public KafkaConsumer()
+        {
+            var config = new ConsumerConfig
+            {
+                BootstrapServers = "localhost",
+                GroupId = $"AppName:{Guid.NewGuid().ToString()}",
+                AutoOffsetReset = AutoOffsetReset.Earliest,
+                EnableAutoCommit = true,
+                ClientId = "2"
+            };
+            _consumer = new ConsumerBuilder<int, Client>(config)
+               .SetValueDeserializer(new MessagePackDeserializer<Client>())
+               .Build();
+        }
+
+        public Task StartAsync(CancellationToken cancellationToken)
+        {
+            _consumer.Subscribe("test_Client");
+            Task.Factory.StartNew(() =>
+            {
+                while (!cancellationToken.IsCancellationRequested)
+                {
+                    try
+                    {
+                        var cr = _consumer.Consume(cancellationToken);
+                        Console.WriteLine($"Consumed: {cr.Message.Value} At: {cr.TopicPartitionOffset} at {cr.Message.Value.DateTime}");
+                    }
+                    catch (ConsumeException e)
+                    {
+                        Console.WriteLine($"Error: {e.Error.Reason}");
+                    }
+                }
+
+
+            }, cancellationToken);
+            return Task.CompletedTask;
+        }
+
+            public Task StopAsync(CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
