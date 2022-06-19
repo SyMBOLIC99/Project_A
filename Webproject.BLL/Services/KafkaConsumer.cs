@@ -36,7 +36,7 @@ namespace Webproject.BLL.Services
                     try
                     {
                         var cr = _consumer.Consume(cancellationToken);
-                        Console.WriteLine($"Consumed: {cr.Message.Value} At: {cr.TopicPartitionOffset} at {cr.Message.Value.DateTime}");
+                        Console.WriteLine($"Consumed: {cr.Message.Value} At: {cr.TopicPartitionOffset} at {cr.Message.Value.DateTime} With Id: {cr.Message.Value.Id}");
                     }
                     catch (ConsumeException e)
                     {
